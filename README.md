@@ -6,6 +6,7 @@ Just a super simple illustration of WASI being used locally with Wasmtime and Wr
 - [Cargo](https://rustup.rs)
 - [npx](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [wasmtime](https://docs.wasmtime.dev/cli-install.html)
+- [wrangler](https://developers.cloudflare.com/workers/wrangler/)
 - make
 
 ## What Can the Makefile Do?
@@ -42,6 +43,12 @@ To run the WASI worker using CloudFlare's Wrangler, run the following:
 $ make run-cf
 ```
 You should see something like the following output.
+
+Please note that if you don't have `wrangler@wasm` installed, you will be prompted to install it. Please proceed with (y).
+
+It may help to be previously logged in to CloudFlare. If you are not logged in, you will be prompted to login. Please proceed with (y).
+
+The run
 ```shell
 $ make run-cf
 cargo build --target wasm32-wasi --release
@@ -53,7 +60,7 @@ npx wrangler@wasm dev target/wasm32-wasi/release/worker.wasm
 Total Upload: 2228.94 KiB / gzip: 563.45 KiB
 ```
 
-If you open your browser to the URI above, `http://localhost:8787`, you should see `hello world!`.
+If you open your browser to the URI above, `http://localhost:8787`, you should see `Hello, world!`.
 
 ## Instructions for Publishing to CloudFlare
 To publish your work to CloudFlare, run the following:
