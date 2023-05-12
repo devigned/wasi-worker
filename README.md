@@ -63,7 +63,8 @@ Total Upload: 2228.94 KiB / gzip: 563.45 KiB
 If you open your browser to the URI above, `http://localhost:8787`, you should see `Hello, world!`.
 
 ## Instructions for Publishing to CloudFlare
-To publish your work to CloudFlare, run the following:
+To publish your work to CloudFlare stop the server or open a new tab in your terminal, then run the following. If you had logged out of CloudFlare, you will be prompted to login again. Please proceed with (y) and follow instructions.
+
 ```shell
 $ make publish-cf
 ```
@@ -78,10 +79,11 @@ npx wrangler@wasm publish --name wasi-worker --compatibility-date 2023-04-11 tar
 Total Upload: 2228.94 KiB / gzip: 563.44 KiB
 Uploaded wasi-worker (2.84 sec)
 Published wasi-worker (3.76 sec)
-  wasi-worker.david353.workers.dev
+  wasi-worker.[your-CF-username].workers.dev
 ```
 If you open your CloudFlare portal, you should see something like the following.
 ![CloudFlare WASI Worker](./imgs/cf-wasi-worker.png)
-If you click on the `Preview` link, wasi-worker.david353.workers.dev in the preceding image, you will be greeted with the `hello world!` you saw in preceding sections.
+If you click on the `Preview` link, wasi-worker.[your-CF-username].workers.dev in the preceding image, you will be greeted with the `Hello, world!` you saw in preceding sections.
 
+Please note that [your-CF-username] will be replaced with your CloudFlare username.
 
