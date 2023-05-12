@@ -22,6 +22,12 @@ Usage:
 ```
 
 ## Instructions for Running with Wasmtime
+
+Before you begin, you need to make sure you have the `wasm32-wasi` target installed. To do this, run the following:
+```shell
+$ rustup target add wasm32-wasi
+```
+
 To run the WASI worker using Wasmtime, run the following:
 ```shell
 $ make run-wt
