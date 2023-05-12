@@ -32,7 +32,7 @@ To run the WASI worker using Wasmtime, run the following:
 ```shell
 $ make run-wt
 ```
-You should see `hello world!` output from the worker.
+You should see `Hello, world!` output from the worker.
 
 The preceding command will build the Rust worker project, then run wasmtime. If you are curious, take a look at the Makefile.
 
